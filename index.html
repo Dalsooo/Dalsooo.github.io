@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
     <link rel=" shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico">
     <title>Dalsooo</title>
@@ -13,7 +13,7 @@
         <div class="clickable" id="clickable" onclick="crazy_dalsooo()">
             <object id="dalsooo" type="image/svg+xml" data="dalsooo.svg"></object>
         </div>
-        <h1 id="talk">Hello My name is dalsooo</h1>
+        <p id="talk">Hello My name is dalsooo</p>
     </div>
     <script>
         var count=10;
@@ -33,6 +33,10 @@
     </script>
 </body>
 <style>
+    #talk{
+        word-break: nowrap;
+        font-size: 1rem;
+    }
     .clickable{
         width: 30%;
         transition: all 1s ease-in-out .1s;
