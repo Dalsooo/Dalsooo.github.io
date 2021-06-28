@@ -10,16 +10,50 @@
 </head>
 <body>
     <div class="dalsooo_home">
-        <object id="dalsooo" type="image/svg+xml" data="dalsooo.svg"></object>
+        <div class="clickable" id="clickable" onclick="crazy_dalsooo()">
+            <object id="dalsooo" type="image/svg+xml" data="dalsooo.svg"></object>
+        </div>
+        <h1 id="talk">Hello My name is dalsooo</h1>
     </div>
+    <script>
+        var count=101;
+        var dalsooo=document.getElementById("clickable");
+        var dalsooo_talk=document.getElementById("talk");
+        function crazy_dalsooo(){
+            count--;
+            if(count==0){
+                dalsooo_talk.innerHTML="I'm pissed off";
+                dalsooo.style.filter="invert(100%)";
+                dalsooo.style.width="100%"
+            }
+            else if(count==5){
+                dalsooo_talk.innerHTML="Are you messing with me?";
+            }
+        }
+    </script>
 </body>
 <style>
+    .clickable{
+        width: 30%;
+        transition: all 1s ease-in-out .1s;
+        filter: invert(0%);
+        -ms-user-select: none; 
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    .clickable:hover{
+        width: 35%;
+        transition: all 1s ease-in-out .1s;
+    }
     .dalsooo_home{
         width: 100%;
         height: 95vh;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        flex-direction: column;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -28,12 +62,8 @@
                 justify-content: center;
     }
     #dalsooo{
-        width: 30%;
-        transition: all 1s ease-in-out .1s;
-    }
-    #dalsooo:hover{
-        width: 35%;
-        transition: all 1s ease-in-out .1s;
+        width: 100%;
+        pointer-events: none;
     }
 </style>
 </html>
